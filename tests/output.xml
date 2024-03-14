@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-14T16:46:54.254547" rpa="false" schemaversion="5">
+<suite id="s1" name="Testex1" source="C:\Users\coder\Downloads\RobotFramework\RobotFramework\tests\testex1.robot">
+<test id="s1-t1" name="Verify that products are visible in cart" line="17">
+<kw name="open the browser with the automationexercise url" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-03-14T16:46:54.404547" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>executable_path=C:\\Users\\coder\\OneDrive\\Desktop\\selenium\\chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-03-14T16:46:54.404547" elapsed="1.269752"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-14T16:46:55.674299" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-14T16:46:55.674299" elapsed="2.307682"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-14T16:46:57.981981" elapsed="0.121575"/>
+</kw>
+<status status="PASS" start="2024-03-14T16:46:54.403547" elapsed="3.700009"/>
+</kw>
+<kw name="navigate to page products">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-14T16:46:58.104578" level="INFO">Opening url 'https://automationexercise.com/products'</msg>
+<arg>https://automationexercise.com/products</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-14T16:46:58.104578" elapsed="1.157686"/>
+</kw>
+<status status="PASS" start="2024-03-14T16:46:58.103556" elapsed="1.158708"/>
+</kw>
+<kw name="search men tshirt in products page">
+<kw name="Verify if search bar is visible" owner="ProductPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-14T16:46:59.280263" level="INFO">Element 'id:search_product' is displayed.</msg>
+<arg>${search bar}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-14T16:46:59.262264" elapsed="0.017999"/>
+</kw>
+<status status="PASS" start="2024-03-14T16:46:59.262264" elapsed="0.017999"/>
+</kw>
+<kw name="Search product name and check product name is displayed" owner="ProductPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-14T16:46:59.281270" level="INFO">Typing text 'men Tshirt' into text field 'id:search_product'.</msg>
+<arg>${search bar}</arg>
+<arg>${name of product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-14T16:46:59.280263" elapsed="0.081901"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-14T16:46:59.362164" level="INFO">Clicking button 'id:submit_search'.</msg>
+<arg>${search button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-14T16:46:59.362164" elapsed="1.347615"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-14T16:47:03.710671" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-14T16:47:00.710188" elapsed="3.000483"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-03-14T16:47:03.710671" level="INFO">Simulating Mouse Over on element 'css:css:#cartModal ~ div'.</msg>
+<msg time="2024-03-14T16:47:03.943244" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-14T16:47:03.943244" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF65D34AD02+56930]
+	(No symbol) [0x00007FF65D2BF602]
+	(No symbol) [0x00007FF65D1742E5]
+	(No symbol) [0x00007FF65D179261]
+	(No symbol) [0x00007FF65D17B6EB]
+	(No symbol) [0x00007FF65D17B7B0]
+	(No symbol) [0x00007FF65D1B955C]
+	(No symbol) [0x00007FF65D1B9A2C]
+	(No symbol) [0x00007FF65D1FA997]
+	(No symbol) [0x00007FF65D1DBCDF]
+	(No symbol) [0x00007FF65D1F81E2]
+	(No symbol) [0x00007FF65D1DBA43]
+	(No symbol) [0x00007FF65D1AD438]
+	(No symbol) [0x00007FF65D1AE4D1]
+	GetHandleVerifier [0x00007FF65D6C6F8D+3711213]
+	GetHandleVerifier [0x00007FF65D7204CD+4077101]
+	GetHandleVerifier [0x00007FF65D71865F+4044735]
+	GetHandleVerifier [0x00007FF65D3E9736+706710]
+	(No symbol) [0x00007FF65D2CB8DF]
+	(No symbol) [0x00007FF65D2C6AC4]
+	(No symbol) [0x00007FF65D2C6C1C]
+	(No symbol) [0x00007FF65D2B68D4]
+	BaseThreadInitThunk [0x00007FFCEC30257D+29]
+	RtlUserThreadStart [0x00007FFCED2EAA58+40]
+</msg>
+<arg>${first_ticket}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="FAIL" start="2024-03-14T16:47:03.710671" elapsed="0.252449">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF65D34AD02+56930]
+	(No symbol) [0x00007FF65D2BF602]
+	(No symbol) [0x00007FF65D1742E5]
+	(No symbol) [0x00007FF65D179261]
+	(No symbol) [0x00007FF65D17B6EB]
+	(No symbol) [0x00007FF65D17B7B0]
+	(No symbol) [0x00007FF65D1B955C]
+	(No symbol) [0x00007FF65D1B9A2C]
+	(No symbol) [0x00007FF65D1FA997]
+	(No symbol) [0x00007FF65D1DBCDF]
+	(No symbol) [0x00007FF65D1F81E2]
+	(No symbol) [0x00007FF65D1DBA43]
+	(No symbol) [0x00007FF65D1AD438]
+	(No symbol) [0x00007FF65D1AE4D1]
+	GetHandleVerifier [0x00007FF65D6C6F8D+3711213]
+	GetHandleVerifier [0x00007FF65D7204CD+4077101]
+	GetHandleVerifier [0x00007FF65D71865F+4044735]
+	GetHandleVerifier [0x00007FF65D3E9736+706710]
+	(No symbol) [0x00007FF65D2CB8DF]
+	(No symbol) [0x00007FF65D2C6AC4]
+	(No symbol) [0x00007FF65D2C6C1C]
+	(No symbol) [0x00007FF65D2B68D4]
+	BaseThreadInitThunk [0x00007FFCEC30257D+29]
+	RtlUserThreadStart [0x00007FFCED2EAA58+40]
+</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${add to cart button first product on the list_2}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-14T16:47:03.963120" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${continue shopping button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-14T16:47:03.963120" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${add to cart button first product on the list_2}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-14T16:47:03.963120" elapsed="0.000000"/>
+</kw>
+<arg>${Name Of Product}</arg>
+<status status="FAIL" start="2024-03-14T16:46:59.280263" elapsed="4.682857">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF65D34AD02+56930]
+	(No symbol) [0x00007FF65D2BF602]
+	(No symbol) [0x00007FF65D1742E5]
+	(No symbol) [0x00007FF65D179261]
+	(No symbol) [0x00007FF65D17B6EB]
+	(No symbol) [0x00007FF65D17B7B0]
+	(No symbol) [0x00007FF65D1B955C]
+	(No symbol) [0x00007FF65D1B9A2C]
+	(No symbol) [0x00007FF65D1FA997]
+	(No symbol) [0x00007FF65D1DBCDF]
+	(No symbol) [0x00007FF65D1F81E2]
+	(No symbol) [0x00007FF65D1DBA43]
+	(No symbol) [0x00007FF65D1AD438]
+	(No symbol) [0x00007FF65D1AE4D1]
+	GetHandleVerifier [0x00007FF65D6C6F8D+3711213]
+	GetHandleVerifier [0x00007FF65D7204CD+4077101]
+	GetHandleVerifier [0x00007FF65D71865F+4044735]
+	GetHandleVerifier [0x00007FF65D3E9736+706710]
+	(No symbol) [0x00007FF65D2CB8DF]
+	(No symbol) [0x00007FF65D2C6AC4]
+	(No symbol) [0x00007FF65D2C6C1C]
+	(No symbol) [0x00007FF65D2B68D4]
+	BaseThreadInitThunk [0x00007FFCEC30257D+29]
+	RtlUserThreadStart [0x00007FFCED2EAA58+40]
+</status>
+</kw>
+<status status="FAIL" start="2024-03-14T16:46:59.262264" elapsed="4.700856">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF65D34AD02+56930]
+	(No symbol) [0x00007FF65D2BF602]
+	(No symbol) [0x00007FF65D1742E5]
+	(No symbol) [0x00007FF65D179261]
+	(No symbol) [0x00007FF65D17B6EB]
+	(No symbol) [0x00007FF65D17B7B0]
+	(No symbol) [0x00007FF65D1B955C]
+	(No symbol) [0x00007FF65D1B9A2C]
+	(No symbol) [0x00007FF65D1FA997]
+	(No symbol) [0x00007FF65D1DBCDF]
+	(No symbol) [0x00007FF65D1F81E2]
+	(No symbol) [0x00007FF65D1DBA43]
+	(No symbol) [0x00007FF65D1AD438]
+	(No symbol) [0x00007FF65D1AE4D1]
+	GetHandleVerifier [0x00007FF65D6C6F8D+3711213]
+	GetHandleVerifier [0x00007FF65D7204CD+4077101]
+	GetHandleVerifier [0x00007FF65D71865F+4044735]
+	GetHandleVerifier [0x00007FF65D3E9736+706710]
+	(No symbol) [0x00007FF65D2CB8DF]
+	(No symbol) [0x00007FF65D2C6AC4]
+	(No symbol) [0x00007FF65D2C6C1C]
+	(No symbol) [0x00007FF65D2B68D4]
+	BaseThreadInitThunk [0x00007FFCEC30257D+29]
+	RtlUserThreadStart [0x00007FFCED2EAA58+40]
+</status>
+</kw>
+<kw name="Close Browser session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-14T16:47:03.963120" elapsed="2.199378"/>
+</kw>
+<status status="PASS" start="2024-03-14T16:47:03.963120" elapsed="2.199378"/>
+</kw>
+<status status="FAIL" start="2024-03-14T16:46:54.403547" elapsed="11.758951">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF65D34AD02+56930]
+	(No symbol) [0x00007FF65D2BF602]
+	(No symbol) [0x00007FF65D1742E5]
+	(No symbol) [0x00007FF65D179261]
+	(No symbol) [0x00007FF65D17B6EB]
+	(No symbol) [0x00007FF65D17B7B0]
+	(No symbol) [0x00007FF65D1B955C]
+	(No symbol) [0x00007FF65D1B9A2C]
+	(No symbol) [0x00007FF65D1FA997]
+	(No symbol) [0x00007FF65D1DBCDF]
+	(No symbol) [0x00007FF65D1F81E2]
+	(No symbol) [0x00007FF65D1DBA43]
+	(No symbol) [0x00007FF65D1AD438]
+	(No symbol) [0x00007FF65D1AE4D1]
+	GetHandleVerifier [0x00007FF65D6C6F8D+3711213]
+	GetHandleVerifier [0x00007FF65D7204CD+4077101]
+	GetHandleVerifier [0x00007FF65D71865F+4044735]
+	GetHandleVerifier [0x00007FF65D3E9736+706710]
+	(No symbol) [0x00007FF65D2CB8DF]
+	(No symbol) [0x00007FF65D2C6AC4]
+	(No symbol) [0x00007FF65D2C6C1C]
+	(No symbol) [0x00007FF65D2B68D4]
+	BaseThreadInitThunk [0x00007FFCEC30257D+29]
+	RtlUserThreadStart [0x00007FFCED2EAA58+40]
+</status>
+</test>
+<doc>To validate the Login form</doc>
+<status status="FAIL" start="2024-03-14T16:46:54.255547" elapsed="11.907596"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testex1">Testex1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
