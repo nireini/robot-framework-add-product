@@ -17,6 +17,7 @@ ${Name Of Product}          men Tshirt
 Verify that products are visible in cart
     navigate to page products
     search men tshirt in products page and add products to cart
+    verify that product are visible in cart and check prices
 
 
 *** Keywords ***
@@ -29,9 +30,9 @@ search men tshirt in products page and add products to cart
     Search product name and check product name is displayed      ${Name Of Product}
     add products to cart
 
-verify that product are visible in cart
+verify that product are visible in cart and check prices
 
-    verify that product are visible in cart
+    verify that product are visible in cart and check prices
 
 
 
